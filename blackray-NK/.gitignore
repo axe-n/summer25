@@ -1,0 +1,17 @@
+build/
+cmake-build-*/
+*.o
+*.so
+*.dylib
+*.dll
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.dat
+*.fits
+*.csv
+notebooks/figures/
+.idea/
+.vscode/settings.json
