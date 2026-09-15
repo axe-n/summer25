@@ -64,11 +64,11 @@ def test_trace_grid_hit_statistics_stabilize_across_screen_resolutions():
 
     records8, status8 = trace_grid(
         xx8.ravel(), yy8.ravel(), observer_radius=radius,
-        inclination=inclination, spin=spin, r_isco=find_isco(spin), r_out=30.0,
+        inclination=inclination, spin=spin, r_isco=find_isco(spin)["radius"], r_out=30.0,
     )
     records16, status16 = trace_grid(
         xx16.ravel(), yy16.ravel(), observer_radius=radius,
-        inclination=inclination, spin=spin, r_isco=find_isco(spin), r_out=30.0,
+        inclination=inclination, spin=spin, r_isco=find_isco(spin)["radius"], r_out=30.0,
     )
 
     coarse_hits = records8[status8 == 0]
@@ -95,7 +95,7 @@ def test_isco_matches_analytic_kerr_formula(spin):
     z2 = np.sqrt(3.0 * spin * spin + z1 * z1)
     expected = 3.0 + z2 - np.sqrt((3.0 - z1) * (3.0 + z1 + 2.0 * z2))
 
-    actual = find_isco(spin=spin)
+    actual = find_isco(spin=spin)["radius"]
 
     assert np.isfinite(actual)
     assert abs(actual - expected) < 1.0e-5

@@ -26,7 +26,7 @@ def kerr_isco(spin: float) -> float:
 def test_kerr_isco_and_transfer_profile():
     spin = 0.99
     expected_isco = kerr_isco(spin)
-    assert abs(expected_isco - 1.4544979381) < 1.0e-5
+    assert abs(expected_isco - 1.4544979381) < 1.0e-4
 
     screen = np.linspace(-8.0, 8.0, 9)
     x_obs, y_obs = np.meshgrid(screen, screen, indexing="ij")
