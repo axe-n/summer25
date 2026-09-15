@@ -1,6 +1,6 @@
 # blackray-deformed-kerr: Open-Source Ray-Tracing and Reflection Spectroscopy in Non-Kerr Spacetimes
 
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
+<!-- [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE) -->
 [![C++](https://img.shields.io/badge/C%2B%2B-17-00599C.svg)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg)](https://www.python.org/)
 
@@ -12,9 +12,8 @@ deformed Kerr spacetimes. Its C++17 core provides metric, Christoffel,
 geodesic, ISCO, tetrad-camera, convolver, and OpenMP screen-grid modules.
 Python wrappers and notebooks support analysis and publication figures.
 
-Historical reference copies came from [ABHModels/blackray](https://github.com/ABHModels/blackray)
-and [ABHModels/raytransfer](https://github.com/ABHModels/raytransfer). Review
-their licenses before removing the temporary `_legacy_*` directories.
+reference copies came from [ABHModels/blackray](https://github.com/ABHModels/blackray)
+and [ABHModels/raytransfer](https://github.com/ABHModels/raytransfer).
 
 ## Mathematical Background
 
@@ -54,9 +53,9 @@ cmake --build /tmp/blackray-build --parallel
 export BLACKRAY_LIBRARY="/tmp/blackray-build/libblackray_core.so"
 ```
 
-The project directory under `/media/...` is currently on VFAT with executable
+<!--The project directory under `/media/...` is currently on VFAT with executable
 bits masked, so `/tmp/blackray-build` or a directory under `$HOME` is required
-for running compiled binaries.
+for running compiled binaries. -->
 
 ## Quickstart
 
@@ -163,7 +162,7 @@ output=rays.csv
 ```bash
 ./build/blackray_cli --config simulation.cfg
 ```
-
+<!--
 ### 5. Generate and open the 14-cell notebook
 
 The generator writes a valid JSON `.ipynb` directly, so `nbformat` is not
@@ -203,7 +202,7 @@ pytest -q tests
 
 The suite checks the Kerr limit, null-norm conservation for 100 deformed-metric
 rays, and safe detection/termination of pathological metric regions.
-
+-->
 ## Repository Layout
 
 ```text
@@ -215,7 +214,7 @@ notebooks/     Notebook generator and generated research demo
 data/          XILLVER/RELXILL and other local model tables
 docs/          Mathematical and usage documentation
 ```
-
+<!--
 ## Legacy Comparison
 
 The original `blackray` contains optimized ray tracing and disk intersection
@@ -258,4 +257,4 @@ git push -u origin main
 ```
 
 Replace `<your-github-username>` with your GitHub account. `gh repo create`
-uses the account selected by `gh auth status`.
+uses the account selected by `gh auth status`.-->
